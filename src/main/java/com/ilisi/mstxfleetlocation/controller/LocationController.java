@@ -14,8 +14,7 @@ public class LocationController {
     @MessageMapping("/location")
     public void getLocation(@Payload LocationMessage message) throws Exception {
         log.info("Message received: {" +
-                "name: " + message.getName() +
-                ", latitude: " + message.getLatitude() +
+                "latitude: " + message.getLatitude() +
                 ", longitude: " + message.getLongitude() +
                 "}", message);
     }
