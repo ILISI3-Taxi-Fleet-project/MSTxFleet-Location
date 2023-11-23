@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 
+import java.time.Instant;
 import java.util.Date;
 
 @Data
@@ -17,5 +18,5 @@ public class LocationMessage {
     private double latitude;
     private double longitude;
     private String userType;
-    private String timestamp = new Date().toString();
+    private Instant timestamp = Instant.now();
 }
