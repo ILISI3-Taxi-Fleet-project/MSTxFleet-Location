@@ -15,8 +15,7 @@ import java.util.Date;
 @Builder
 public class LocationMessage {
     private String userId;
-    private double latitude;
-    private double longitude;
+    private String location;
     private String userType;
-    private Instant timestamp = Instant.now();
+    private Instant createdAt = Instant.now();
 }

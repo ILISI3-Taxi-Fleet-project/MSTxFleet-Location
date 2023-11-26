@@ -18,7 +18,7 @@ public class LocationController {
     @MessageMapping("/location")
     public void getLocation(@Payload LocationMessage message)  {
         kafkaTemplate.send("location", message);
-        System.out.println("Message sent: " + message.getLatitude() + " " + message.getLongitude());
+        log.info("Message sent to Kafka topic location: {}", message);
     }
 
 }
