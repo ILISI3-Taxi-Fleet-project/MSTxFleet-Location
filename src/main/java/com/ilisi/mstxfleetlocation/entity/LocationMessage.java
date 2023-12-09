@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.time.Instant;
-import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -18,4 +16,6 @@ public class LocationMessage {
     private String location;
     private String userType;
     private Instant createdAt = Instant.now();
+    private Instant updatedAt = Instant.now();
+    private Boolean isOnline = true;
 }
